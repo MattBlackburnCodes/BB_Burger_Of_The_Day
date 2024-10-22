@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import Burger from './components/burgerDisplay';
+// Add serving sizes to the burgers
 
 function App() {
   const [burgers, setBurgers] = useState([]); 
@@ -20,20 +22,7 @@ function App() {
   
   return (
     <div>
-      <p>{burgers.map((burger, index) => (
-        <div key={index}>
-          <h2>{burger.name}</h2>
-          <p>{burger.description}</p>
-          <ul>{burger.ingredients.map((ingredient, i) =>
-            <li key={i}>{ingredient}</li>
-            )}
-          </ul>
-          <ul>{burger.steps.map((step, i) =>
-            <li key={i}>{step}</li>
-            )}
-          </ul>
-        </div>
-      ))}</p>
+      < Burger burgers={burgers} />
     </div>
   );
 }
