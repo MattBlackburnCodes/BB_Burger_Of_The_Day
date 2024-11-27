@@ -37,22 +37,28 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  color: red;
+  border: 5px solid red;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(248, 223, 38, 1);
   cursor: pointer;
   transition: border-color 0.25s;
+  box-shadow: black 0px 0px 10px;
 }
 button:hover {
   border-color: #646cff;
+  transition: border-color 0.25s;
+  scale: 1.05;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
